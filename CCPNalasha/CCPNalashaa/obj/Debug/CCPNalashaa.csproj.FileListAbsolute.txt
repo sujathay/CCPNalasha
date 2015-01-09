@@ -1,0 +1,12 @@
+D:\projects\CCPNalashaa\CCPNalashaa\bin\CCPNalashaa.dll.config
+D:\projects\CCPNalashaa\CCPNalashaa\bin\CCPNalashaa.dll
+D:\projects\CCPNalashaa\CCPNalashaa\bin\CCPNalashaa.pdb
+D:\projects\CCPNalashaa\CCPNalashaa\obj\Debug\CCPNalashaa.csprojResolveAssemblyReference.cache
+D:\projects\CCPNalashaa\CCPNalashaa\obj\Debug\CCPNalashaa.dll
+D:\projects\CCPNalashaa\CCPNalashaa\obj\Debug\CCPNalashaa.pdb
+D:\CCPNalashaa\CCPNalashaa\bin\CCPNalashaa.dll.config
+D:\CCPNalashaa\CCPNalashaa\bin\CCPNalashaa.dll
+D:\CCPNalashaa\CCPNalashaa\bin\CCPNalashaa.pdb
+D:\CCPNalashaa\CCPNalashaa\obj\Debug\CCPNalashaa.csprojResolveAssemblyReference.cache
+D:\CCPNalashaa\CCPNalashaa\obj\Debug\CCPNalashaa.dll
+D:\CCPNalashaa\CCPNalashaa\obj\Debug\CCPNalashaa.pdb

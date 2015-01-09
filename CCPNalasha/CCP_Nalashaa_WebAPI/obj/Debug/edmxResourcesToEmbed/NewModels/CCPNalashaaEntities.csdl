@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CCPNalashaaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Commuter">
+    <Key>
+      <PropertyRef Name="CommuterId" />
+    </Key>
+    <Property Name="CommuterId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TripId" Type="Int32" />
+    <Property Name="UserId" Type="Int32" />
+    <NavigationProperty Name="Trip" Relationship="Self.FK_Commuter_Trip" FromRole="Commuter" ToRole="Trip" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Commuter_User" FromRole="Commuter" ToRole="User" />
+  </EntityType>
+  <EntityType Name="CommuterRequest">
+    <Key>
+      <PropertyRef Name="CommuterRequestId" />
+    </Key>
+    <Property Name="CommuterRequestId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TripId" Type="Int32" />
+    <Property Name="UserId" Type="Int32" />
+    <NavigationProperty Name="Trip" Relationship="Self.FK_CommuterRequest_Trip" FromRole="CommuterRequest" ToRole="Trip" />
+    <NavigationProperty Name="User" Relationship="Self.FK_CommuterRequest_User" FromRole="CommuterRequest" ToRole="User" />
+  </EntityType>
+  <EntityType Name="CommuterRequest1">
+    <Key>
+      <PropertyRef Name="CommuterRequestId" />
+    </Key>
+    <Property Name="CommuterRequestId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="TripId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Commuter1">
+    <Key>
+      <PropertyRef Name="CommuterId" />
+    </Key>
+    <Property Name="CommuterId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="TripId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Trip">
+    <Key>
+      <PropertyRef Name="TripId" />
+    </Key>
+    <Property Name="TripId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="Origin" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Destination" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Origin_LatLn" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Destination_LatLn" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CommutersCapacity" Type="Int32" />
+    <Property Name="TripDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="TripStatus" Type="Int32" />
+    <NavigationProperty Name="Commuters" Relationship="Self.FK_Commuter_Trip" FromRole="Trip" ToRole="Commuter" />
+    <NavigationProperty Name="CommuterRequests" Relationship="Self.FK_CommuterRequest_Trip" FromRole="Trip" ToRole="CommuterRequest" />
+    <NavigationProperty Name="TripStatusMaster" Relationship="Self.FK_Trip_TripStatusMaster" FromRole="Trip" ToRole="TripStatusMaster" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Trip_User" FromRole="Trip" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Trip1">
+    <Key>
+      <PropertyRef Name="TripId" />
+    </Key>
+    <Property Name="TripId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Origin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Destination" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Origin_Latln" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Destination_Latln" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CommutersCapacity" Type="Int32" Nullable="false" />
+    <Property Name="TripDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TripStatus" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TripStatusMaster">
+    <Key>
+      <PropertyRef Name="TripStatusId" />
+    </Key>
+    <Property Name="TripStatusId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatusName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Trips" Relationship="Self.FK_Trip_TripStatusMaster" FromRole="TripStatusMaster" ToRole="Trip" />
+  </EntityType>
+  <EntityType Name="TripStatusMaster1">
+    <Key>
+      <PropertyRef Name="TripStatusMasterId" />
+    </Key>
+    <Property Name="TripStatusMasterId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatusName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UserPassword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="RegisteredDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Commuters" Relationship="Self.FK_Commuter_User" FromRole="User" ToRole="Commuter" />
+    <NavigationProperty Name="CommuterRequests" Relationship="Self.FK_CommuterRequest_User" FromRole="User" ToRole="CommuterRequest" />
+    <NavigationProperty Name="Trips" Relationship="Self.FK_Trip_User" FromRole="User" ToRole="Trip" />
+  </EntityType>
+  <EntityType Name="User1">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Commuter_Trip">
+    <End Role="Trip" Type="Self.Trip" Multiplicity="0..1" />
+    <End Role="Commuter" Type="Self.Commuter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trip">
+        <PropertyRef Name="TripId" />
+      </Principal>
+      <Dependent Role="Commuter">
+        <PropertyRef Name="TripId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Commuter_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Commuter" Type="Self.Commuter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Commuter">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CommuterRequest_Trip">
+    <End Role="Trip" Type="Self.Trip" Multiplicity="0..1" />
+    <End Role="CommuterRequest" Type="Self.CommuterRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trip">
+        <PropertyRef Name="TripId" />
+      </Principal>
+      <Dependent Role="CommuterRequest">
+        <PropertyRef Name="TripId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CommuterRequest_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="CommuterRequest" Type="Self.CommuterRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="CommuterRequest">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Trip_TripStatusMaster">
+    <End Role="TripStatusMaster" Type="Self.TripStatusMaster" Multiplicity="0..1" />
+    <End Role="Trip" Type="Self.Trip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TripStatusMaster">
+        <PropertyRef Name="TripStatusId" />
+      </Principal>
+      <Dependent Role="Trip">
+        <PropertyRef Name="TripStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Trip_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Trip" Type="Self.Trip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Trip">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CCPNalashaaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+    <EntitySet Name="Commuters" EntityType="Self.Commuter" />
+    <EntitySet Name="CommuterRequests" EntityType="Self.CommuterRequest" />
+    <EntitySet Name="CommuterRequests1" EntityType="Self.CommuterRequest1" />
+    <EntitySet Name="Commuters1" EntityType="Self.Commuter1" />
+    <EntitySet Name="Trips" EntityType="Self.Trip" />
+    <EntitySet Name="Trips1" EntityType="Self.Trip1" />
+    <EntitySet Name="TripStatusMasters" EntityType="Self.TripStatusMaster" />
+    <EntitySet Name="TripStatusMasters1" EntityType="Self.TripStatusMaster1" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Users1" EntityType="Self.User1" />
+    <AssociationSet Name="FK_Commuter_Trip" Association="Self.FK_Commuter_Trip">
+      <End Role="Trip" EntitySet="Trips" />
+      <End Role="Commuter" EntitySet="Commuters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Commuter_User" Association="Self.FK_Commuter_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Commuter" EntitySet="Commuters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CommuterRequest_Trip" Association="Self.FK_CommuterRequest_Trip">
+      <End Role="Trip" EntitySet="Trips" />
+      <End Role="CommuterRequest" EntitySet="CommuterRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CommuterRequest_User" Association="Self.FK_CommuterRequest_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="CommuterRequest" EntitySet="CommuterRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Trip_TripStatusMaster" Association="Self.FK_Trip_TripStatusMaster">
+      <End Role="TripStatusMaster" EntitySet="TripStatusMasters" />
+      <End Role="Trip" EntitySet="Trips" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Trip_User" Association="Self.FK_Trip_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Trip" EntitySet="Trips" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

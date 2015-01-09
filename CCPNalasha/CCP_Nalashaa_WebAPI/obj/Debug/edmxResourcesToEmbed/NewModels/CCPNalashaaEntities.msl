@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CCPNalashaaModelStoreContainer" CdmEntityContainer="CCPNalashaaEntities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="CCPNalashaaModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Commuters">
+      <EntityTypeMapping TypeName="CCPNalashaaModel.Commuter">
+        <MappingFragment StoreEntitySet="Commuter">
+          <ScalarProperty Name="CommuterId" ColumnName="CommuterId" />
+          <ScalarProperty Name="TripId" ColumnName="TripId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommuterRequests">
+      <EntityTypeMapping TypeName="CCPNalashaaModel.CommuterRequest">
+        <MappingFragment StoreEntitySet="CommuterRequest">
+          <ScalarProperty Name="CommuterRequestId" ColumnName="CommuterRequestId" />
+          <ScalarProperty Name="TripId" ColumnName="TripId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommuterRequests1">
+      <EntityTypeMapping TypeName="CCPNalashaaModel.CommuterRequest1">
+        <MappingFragment StoreEntitySet="CommuterRequests">
+          <ScalarProperty Name="CommuterRequestId" ColumnName="CommuterRequestId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="TripId" ColumnName="TripId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Commuters1">
+      <EntityTypeMapping TypeName="CCPNalashaaModel.Commuter1">
+        <MappingFragment StoreEntitySet="Commuters">
+          <ScalarProperty Name="CommuterId" ColumnName="CommuterId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="TripId" ColumnName="TripId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trips">
+      <EntityTypeMapping TypeName="CCPNalashaaModel.Trip">
+        <MappingFragment StoreEntitySet="Trip">
+          <ScalarProperty Name="TripId" ColumnName="TripId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Origin" ColumnName="Origin" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="Origin_LatLn" ColumnName="Origin_LatLn" />
+          <ScalarProperty Name="Destination_LatLn" ColumnName="Destination_LatLn" />
+          <ScalarProperty Name="CommutersCapacity" ColumnName="CommutersCapacity" />
+          <ScalarProperty Name="TripDate" ColumnName="TripDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="TripStatus" ColumnName="TripStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trips1">
+      <EntityTypeMapping TypeName="CCPNalashaaModel.Trip1">
+        <MappingFragment StoreEntitySet="Trips">
+          <ScalarProperty Name="TripId" ColumnName="TripId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Origin" ColumnName="Origin" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="Origin_Latln" ColumnName="Origin_Latln" />
+          <ScalarProperty Name="Destination_Latln" ColumnName="Destination_Latln" />
+          <ScalarProperty Name="CommutersCapacity" ColumnName="CommutersCapacity" />
+          <ScalarProperty Name="TripDate" ColumnName="TripDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="TripStatus" ColumnName="TripStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TripStatusMasters">
+      <EntityTypeMapping TypeName="CCPNalashaaModel.TripStatusMaster">
+        <MappingFragment StoreEntitySet="TripStatusMaster">
+          <ScalarProperty Name="TripStatusId" ColumnName="TripStatusId" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TripStatusMasters1">
+      <EntityTypeMapping TypeName="CCPNalashaaModel.TripStatusMaster1">
+        <MappingFragment StoreEntitySet="TripStatusMasters">
+          <ScalarProperty Name="TripStatusMasterId" ColumnName="TripStatusMasterId" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="CCPNalashaaModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="RegisteredDate" ColumnName="RegisteredDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users1">
+      <EntityTypeMapping TypeName="CCPNalashaaModel.User1">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
