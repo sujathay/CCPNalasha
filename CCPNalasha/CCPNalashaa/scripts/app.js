@@ -1,6 +1,6 @@
 ﻿var CCPNALASHAA_WEB_API_URL = 'http://192.168.4.148/ccp_nalashaa_api/api/'
 
-var CCPNalashaaApp = angular.module("CCPNalashaaApp", ['ngRoute', 'ngResource']).
+var CCPNalashaaApp = angular.module("CCPNalashaaApp", ['ngRoute', 'ngResource','ngCookies']).
     config(function ($routeProvider) {
         $routeProvider.
             when('/', { controller: HomeCtrl, templateUrl: 'home.html' }).
@@ -38,16 +38,18 @@ CCPNalashaaApp.factory('CCPNalashaa', function ($resource) {
 });
 
  
-var HomeCtrl = function ($scope, $location, ccp_home) {
+var HomeCtrl = function ($scope, $location, ccp_home, $cookieStore) {
     $scope.init = function () {
         $scope.tripDetails = [];
         $scope.totaltrips = TripDetails.length;
         $scope.isDesc = false;
         $scope.from = 0;
         $scope.to = TripDetails.length;
-        $scope.isMore = true;
-
-        $scope.tripDetails = $scope.tripDetails.concat(TripDetails.slice($scope.from, $scope.to));
+        $scope.isMore = true; 
+        $cookieStore.put('alltrips', $scope.tripDetails.concat(TripDetails.slice($scope.from, $scope.to)));
+        $scope.tripDetails = $cookieStore.get('alltrips'); 
+        // Removing a cookie
+        //$cookieStore.remove('myFavorite');
     }
 
     $scope.init();

@@ -95,7 +95,8 @@
     <Content Include="scripts\jquery-ui.min.js" />
     <Content Include="scripts\jquery_1.9.1.min.js" />
     <Content Include="scripts\json-data.js" />
-    <Content Include="scripts\Mockdata.js" />
+    <Content Include="scripts\trips-json-data.js" />
+    <Content Include="scripts\users-json-data.js" />
     <Content Include="styles\background.png" />
     <Content Include="styles\bullet.png" />
     <Content Include="styles\carpool_logo.gif" />
