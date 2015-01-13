@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html ng-app="CCPNalashaaApp" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <script src="scripts/jquery-1.10.2.js"></script>
@@ -6,13 +6,49 @@
     <script src="scripts/angular.js"></script>
     <script src="scripts/angular-route.js"></script>
     <script src="scripts/angular-resource.js"></script>
+    <script src="scripts/Mockdata.js"></script>
     <script src="scripts/app.js"></script>
     <link href="styles/main.css" rel="stylesheet" />
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+   
+
     <title>Corporate Car Pooling</title>
+
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" title="style" />
+
 </head>
 <body>
-    <div class="container">
-        <div ng-view></div>
+    <div id="main" class="main-form" novalidate>
+        <div id="header">
+            <div id="logo">
+                <div id="logo_text">
+                    <img src="styles/carpool_logo.gif" width="200" />
+                </div>
+            </div>
+            <div id="menubar">
+                <ul id="menu">
+                    <li class="selected"><a href="/#/">Home</a></li>
+                    <li><a href="/alltrips">All Trips</a></li>
+                    <li><a href="/mytrips">My Trips</a></li>
+                    <li><a href="/#/trips">Trip Management</a></li>
+                    <li><a href="/register">Register</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="site_content">
+            <div id="content">
+                <div ng-app="CCPNalashaaApp" class="container">
+                    <div ng-view></div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            Copyright &copy; Nalashaa Solutions LLC
+        </div>
     </div>
 </body>
 </html>

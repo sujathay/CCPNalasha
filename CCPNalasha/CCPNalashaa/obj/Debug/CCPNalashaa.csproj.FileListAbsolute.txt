@@ -10,3 +10,9 @@ D:\CCPNalashaa\CCPNalashaa\bin\CCPNalashaa.pdb
 D:\CCPNalashaa\CCPNalashaa\obj\Debug\CCPNalashaa.csprojResolveAssemblyReference.cache
 D:\CCPNalashaa\CCPNalashaa\obj\Debug\CCPNalashaa.dll
 D:\CCPNalashaa\CCPNalashaa\obj\Debug\CCPNalashaa.pdb
+D:\CCP\CCPNalasha\CCPNalashaa\bin\CCPNalashaa.dll.config
+D:\CCP\CCPNalasha\CCPNalashaa\bin\CCPNalashaa.dll
+D:\CCP\CCPNalasha\CCPNalashaa\bin\CCPNalashaa.pdb
+D:\CCP\CCPNalasha\CCPNalashaa\obj\Debug\CCPNalashaa.csprojResolveAssemblyReference.cache
+D:\CCP\CCPNalasha\CCPNalashaa\obj\Debug\CCPNalashaa.dll
+D:\CCP\CCPNalasha\CCPNalashaa\obj\Debug\CCPNalashaa.pdb

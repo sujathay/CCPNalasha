@@ -1,34 +1,43 @@
 ﻿<h2>
-    {{action}} Trip
+    {{action}} 
 </h2>
 <div class="list-container">
     <table>
         <tr>
             <td>Origin:</td>
             <td>
-                <input type="text" ng-model="contact.FirstName" />
-                <input type="text" ng-autocomplete ng-model="autocomplete" options="options" details="details" />
+               
+                <input id="txtOrigin" ng-model="trips.Origin" class="location" type="text"
+                       placeholder="Enter a location" required/>
+                <!--<input ng-model="trips.Origin_Lat" type="text" />
+                <input ng-model="trips.Origin_Ln" type="text" />-->
             </td>
         </tr>
         <tr>
             <td>Destination:</td>
-            <td><input type="text" ng-model="contact.LastName" /></td>
+            <td><input id="txtDestination" ng-model="trips.Destination" class="location" type="text"
+       placeholder="Enter a location" required />
+                <!--<input ng-model="trips.Destination_Lat" type="text" />
+                <input ng-model="trips.Destination_Ln" type="text" />-->
+            
+            </td>
         </tr>
         <tr>
             <td>Travel Date:</td>
-            <td><input type="text" ng-model="contact.Email" /></td>
+            <td><input required ng-model="trips.TripDate" datepicker />            
+                
+            </td>
         </tr>
         <tr>
             <td>Vehicle Capacity:</td>
-            <td><input type="text" ng-model="contact.Phone" /></td>
+            <td><input type="number" ng-model="trips.CommutersCapacity" required /> </td>
         </tr>
         <tr>
             <td colspan="2" style="text-align:right">
-                <button class="button" ng-click="save()">
-                    {{action}}
-                </button>
-                <a ng-click="clear()" class="cancel">Clear</a>
+                <button  class="button" ng-click="save()"> Save
+                </button><button  class="button" ng-click="clear()">Clear</button> 
             </td>
         </tr>
+        
     </table>
 </div>
