@@ -1,38 +1,51 @@
 ﻿<h1>
     Trips
 </h1>
+<h2 style="width:750px;">
+    It is an internal carpool website for the company . It allows to search pools across companies.
+</h2>
 
 <div class="new-line"></div>
 
-<div class="wrapper">
-    <!--<select ng-model="selectedItem" ng-options="option.name for option in options"></select><br>-->
+<div class="wrapper"> 
+   
+
     <div class="list-container">
-        <table>
+        <table ng-table="tableParams" id="results">
             <tr>
-                <th><a ng-click="orderBy('SlNo')">#</a></th>
-                <th><a ng-click="orderBy('FirstName')">Name</a></th>
-                <th><a ng-click="orderBy('Route')">Route</a></th>
+                <th>#</th>
+                <th><a ng-click="orderBy('Origin')">Name</a></th>
+                <th><a ng-click="orderBy('Destination')">Route</a></th>
                 <th></th>
             </tr>
 
-            <tr ng-repeat="item in tripDetails" id="item_{{item.SlNo}}">
-                <td>{{item.SlNo}}</td>
+            <tr ng-repeat="item in tripDetails | startFrom:currentPage*pageSize | limitTo:pageSize" id="item_{{item.TripId}}">
                 <td>{{item.Origin}}</td>
                 <td>{{item.Destination}}</td>
-                <td><button ng-click="MoreDetails(item.SlNo)">More</button></td>
+                <td><button ng-click="MoreDetails(item.TripId)">More</button></td>
+                <td><button  >Edit</button></td>
             </tr>
 
         </table>
-        <a ng-show="isMore" class="more">show more</a>
+        <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+            Previous
+        </button>
+        {{currentPage+1}}/{{numberOfPages()}}
+        <button ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+            Next
+        </button>
+      
+
+       
     </div>
     <div class="detailed-trip" ng-show="isDetailedTrip">
         <h2>Details</h2>
         <div class="details-trip" ng-repeat="item in selectedTrip" id="item_{{item.SlNo}}">
-            <span>{{item.FirstName}}</span><span>{{item.LastName}}</span>
-            <div>{{item.Route}}</div>
-            <div>{{item.Email}}</div>
-            <div>{{item.Phone}}</div>
-            <div>{{item.DateTime}}</div>
+            <span>{{item.Origin}}</span><span>{{item.Origin}}</span>
+            <div>{{item.Destination}}</div>
+            <div>{{item.TripDate}}</div>
+            <!--<div>{{item.Phone}}</div>
+            <div>{{item.DateTime}}</div>-->
             <span>Send request to join the trip</span><button>Join</button>
         </div>
 

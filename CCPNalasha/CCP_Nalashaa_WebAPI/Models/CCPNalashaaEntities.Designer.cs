@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\projects\CCP_Nalashaa\CCP_Nalashaa_WebAPI\Models\CCPNalashaaEntities.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\projects\CCPNalashaa\CCP_Nalashaa_WebAPI\Models\CCPNalashaaEntities.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

@@ -1,165 +1,231 @@
-html {
+html
+{
     height: 100%;
 }
 
-* {
+*
+{
     margin: 0;
     padding: 0;
 }
 
-body {
+body
+{
     font: normal .80em 'trebuchet ms', arial, sans-serif;
     background: #F0EFE2 url(background.png) repeat;
     color: #000;
 }
 
-p {
+p
+{
     padding: 0 0 20px 0;
     line-height: 1.7em;
 }
 
-img {
+img
+{
     border: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6
+{
     font: normal 175% 'century gothic', arial, sans-serif;
     color: #000;
-    margin: 0 0 15px 0;
-    padding: 15px 0 5px 0;
+    margin: 0 0 5px 0;
 }
 
-h2 {
+h2
+{
     font: normal 175% 'century gothic', arial, sans-serif;
 }
 
-h4, h5, h6 {
+h4, h5, h6
+{
     margin: 0;
     padding: 0 0 5px 0;
     font: normal 120% arial, sans-serif;
 }
 
-h5, h6 {
+h5, h6
+{
     font: italic 95% arial, sans-serif;
     padding: 0 0 15px 0;
 }
 
-a, a:hover {
+a, a:hover
+{
     outline: none;
     text-decoration: underline;
     color: #000;
 }
 
-    a:hover {
+    a:hover
+    {
         text-decoration: none;
     }
 
-.left {
+.left
+{
     float: left;
     width: auto;
     margin-right: 10px;
 }
 
-.right {
+.right
+{
     float: right;
     width: auto;
     margin-left: 10px;
 }
 
-.center {
+.center
+{
     display: block;
     text-align: center;
     margin: 20px auto;
 }
 
-blockquote {
+blockquote
+{
     margin: 20px 0;
     padding: 10px 20px 0 20px;
     border: 1px solid #E5E5DB;
     background: #FFF;
 }
 
-ul {
+ul
+{
     margin: 2px 0 22px 17px;
 }
 
-    ul li {
+    ul li
+    {
         list-style-type: circle;
         margin: 0 0 6px 0;
         padding: 0 0 4px 5px;
     }
 
-ol {
+ol
+{
     margin: 8px 0 22px 20px;
 }
 
-    ol li {
+    ol li
+    {
         margin: 0 0 11px 0;
     }
 
-#main, #logo, #menubar, #site_content, #footer {
+#main, #logo, #menubar, #site_content, #footer
+{
     margin-left: auto;
     margin-right: auto;
 }
 
-#header {
+#header
+{
     background: transparent;
 }
 
-#logo {
+#logo
+{
     width: 898px;
     position: relative;
     padding-bottom: 5px;
     border-bottom: 2px solid #FFF;
+    clear: both;
+    display: block;
+    overflow: auto;
 }
 
-    #logo #logo_text {
+    #logo #logo_text
+    {
         top: 20px;
         left: 0;
+        margin-top: 10px;
+        background-color: transparent;
     }
 
-    #logo h1, #logo h2 {
+        #logo #logo_text #main_title
+        {
+            margin-top: 10px;
+            font-size: 25pt;
+            font-weight: bold;
+            color: #FFF;
+        }
+
+        #logo #logo_text #header_img
+        {
+            float:left;
+        }
+
+        #logo #logo_text #header_title
+        {
+            float: left;
+            margin-top: 75px;
+            margin-left: 75px;
+        }
+
+        #logo #logo_text #sub_title
+        {
+            margin-top: 10px;
+            font-size: 20pt;
+            font-weight: bold;
+            margin-left:75px;
+            line-height:50px;
+            text-align:right;
+            color:#cfcccc;
+        }
+
+    #logo h1, #logo h2
+    {
         font: normal 300% 'century gothic', arial, sans-serif;
         border-bottom: 0;
         text-transform: none;
         margin: 0;
     }
 
-#logo_text h1, #logo_text h1 a, #logo_text h1 a:hover {
+#logo_text h1, #logo_text h1 a, #logo_text h1 a:hover
+{
     padding: 22px 0 0 0;
     color: #FFF;
     letter-spacing: -1px;
     text-decoration: none;
 }
 
-    #logo_text h1 a .logo_colour {
+    #logo_text h1 a .logo_colour
+    {
         color: #FFF;
     }
 
-#logo_text h2 {
+#logo_text h2
+{
     font-size: 100%;
     padding: 4px 0 0 0;
     color: #FFF;
 }
 
-#menubar {
+#menubar
+{
     width: 898px;
     height: 52px;
     padding: 0;
     background: #000;
 }
 
-ul#menu, ul#menu li {
+ul#menu, ul#menu li
+{
     float: left;
     margin: 0;
     padding: 0;
 }
 
-    ul#menu li {
+    ul#menu li
+    {
         list-style: none;
     }
 
-        ul#menu li a {
+        ul#menu li a
+        {
             letter-spacing: 0.1em;
             font: normal 100% arial, sans-serif;
             display: block;
@@ -174,12 +240,14 @@ ul#menu, ul#menu li {
             background: transparent;
         }
 
-            ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover {
+            ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
+            {
                 color: #FFF;
                 background: transparent url(transparent_light.png) repeat;
             }
 
-#site_content {
+#site_content
+{
     width: 854px;
     overflow: hidden;
     margin: 0 auto 0 auto;
@@ -187,46 +255,54 @@ ul#menu, ul#menu li {
     background: #FFF;
 }
 
-.sidebar {
+.sidebar
+{
     float: right;
     width: 210px;
     padding: 0 15px 20px 15px;
 }
 
-    .sidebar ul {
+    .sidebar ul
+    {
         width: 198px;
         padding: 4px 0 0 0;
         margin: 4px 0 30px 0;
     }
 
-    .sidebar li {
+    .sidebar li
+    {
         list-style: none;
         padding: 0 0 7px 0;
     }
 
-        .sidebar li a, .sidebar li a:hover {
+        .sidebar li a, .sidebar li a:hover
+        {
             padding: 0 0 0 40px;
             display: block;
             background: transparent url(link.png) no-repeat left center;
         }
 
-            .sidebar li a.selected {
+            .sidebar li a.selected
+            {
                 color: #7E2451;
                 text-decoration: none;
             }
 
-#content {
+#content
+{
     text-align: left;
     float: left;
-    width: 595px;
+    width: 100%;
     padding: 0;
 }
 
-    #content ul {
+    #content ul
+    {
         margin: 2px 0 22px 0px;
     }
 
-        #content ul li {
+        #content ul li
+        {
             list-style-type: none;
             background: url(bullet.png) no-repeat;
             margin: 0 0 6px 0;
@@ -234,7 +310,8 @@ ul#menu, ul#menu li {
             line-height: 1.5em;
         }
 
-#footer {
+#footer
+{
     width: 898px;
     font: normal 100% 'lucida sans unicode', arial, sans-serif;
     height: 33px;
@@ -246,17 +323,20 @@ ul#menu, ul#menu li {
     letter-spacing: 0.1em;
 }
 
-    #footer a {
+    #footer a
+    {
         color: #FFF;
         text-decoration: none;
     }
 
-        #footer a:hover {
+        #footer a:hover
+        {
             color: #FFF;
             text-decoration: underline;
         }
 
-.search {
+.search
+{
     color: #5D5D5D;
     border: 1px solid #BBB;
     width: 134px;
@@ -264,27 +344,32 @@ ul#menu, ul#menu li {
     font: 100% arial, sans-serif;
 }
 
-#colours {
+#colours
+{
     height: 0px;
     text-align: right;
     padding: 66px 16px 0px 300px;
 }
 
-.form_settings {
+.form_settings
+{
     margin: 15px 0 0 0;
 }
 
-    .form_settings p {
+    .form_settings p
+    {
         padding: 0 0 4px 0;
     }
 
-    .form_settings span {
+    .form_settings span
+    {
         float: left;
         width: 200px;
         text-align: left;
     }
 
-    .form_settings input, .form_settings textarea {
+    .form_settings input, .form_settings textarea
+    {
         padding: 5px;
         width: 299px;
         font: 100% arial;
@@ -293,7 +378,8 @@ ul#menu, ul#menu li {
         color: #47433F;
     }
 
-    .form_settings .submit {
+    .form_settings .submit
+    {
         font: 100% arial;
         border: 1px solid;
         width: 99px;
@@ -305,16 +391,19 @@ ul#menu, ul#menu li {
         color: #FFF;
     }
 
-    .form_settings textarea, .form_settings select {
+    .form_settings textarea, .form_settings select
+    {
         font: 100% arial;
         width: 299px;
     }
 
-    .form_settings select {
+    .form_settings select
+    {
         width: 310px;
     }
 
-    .form_settings .checkbox {
+    .form_settings .checkbox
+    {
         margin: 4px 0;
         padding: 0;
         width: 14px;
@@ -322,7 +411,8 @@ ul#menu, ul#menu li {
         background: none;
     }
 
-.separator {
+.separator
+{
     width: 100%;
     height: 0;
     border-top: 1px solid #D9D5CF;
@@ -330,19 +420,98 @@ ul#menu, ul#menu li {
     margin: 0 0 20px 0;
 }
 
-table {
-    margin: 10px 0 30px 0;
+.list-container
+{
+    margin-top: 15px;
+    background-color: #DDDDDD;
+    padding: 10px;
 }
 
-    table tr th, table tr td {
-        background: #3B3B3B;
-        color: #FFF;
-        padding: 7px 4px;
-        text-align: left;
+    .list-container .list
+    {
+        margin: 0 0 5px 0;
+        line-height: 24px;
+        height: auto;
+        display: block;
+        overflow: auto;
+        width: 100%;
+        padding: 0 0 10px 0;
+        border-bottom: solid 1px #999999;
     }
 
-    table tr td {
-        background: #F0EFE2;
-        color: #47433F;
-        border-top: 1px solid #FFF;
-    }
+        .list-container .list .date
+        {
+            font-weight: bold;
+            display: inline-block;
+            height: 24px;
+        }
+
+        .list-container .list .origin
+        {
+            font-weight: bold;
+            background-image: url('origin_pin.png');
+            background-position: left 4px;
+            background-repeat: no-repeat;
+            padding-left: 25px;
+            display: inline-block;
+            height: 30px;
+        }
+
+        .list-container .list .destination
+        {
+            font-weight: bold;
+            background-image: url('dest_pin.png');
+            background-position: left 4px;
+            background-repeat: no-repeat;
+            padding-left: 25px;
+            display: inline-block;
+            height: 30px;
+        }
+
+        .list-container .list .capacity
+        {
+            font-weight: bold;
+            background-image: url('car.png');
+            background-position: left 2px;
+            background-repeat: no-repeat;
+            padding-left: 25px;
+            display: inline-block;
+            height: 24px;
+        }
+
+        .list-container .list .Open
+        {
+            font-weight: bold;
+        }
+
+        .list-container .list .Closed
+        {
+            font-weight: bold;
+        }
+
+        .list-container .list .Cancelled
+        {
+            font-weight: bold;
+        }
+        
+        .list-container .list .bold
+        {
+            font-weight: bold;
+        }
+
+        .list-container .list .more
+        {
+            float: right;
+            display: inline-block;
+            text-decoration: none;
+            padding: 0 5px 0 5px;
+            background-color: #c3c;
+            margin-left: 10px;
+            color: #FFF;
+        }
+
+.title
+{
+    width: 100%;
+    border-bottom: solid 1px #000000;
+}

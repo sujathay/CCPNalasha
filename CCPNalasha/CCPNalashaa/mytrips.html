@@ -1,0 +1,16 @@
+﻿<div class="title">
+    <h2>My Trips</h2>
+</div>
+<div class="list-container">
+    <div class="list" ng-repeat="item in trips | filter:currentUser">
+        <span class="date">{{item.TripDate | date:"MM/dd/yyyy 'at' h:mma"}}</span><br />
+        <span class="origin">{{item.Origin}}</span><br />
+        <span class="destination">{{item.Destination}}</span><br />
+        <span class="capacity">Commuters Capacity: {{item.CommutersCapacity}}</span><br />
+        Status: <span class="{{getTripStatus(item.TripStatus)}}">{{getTripStatus(item.TripStatus)}}</span><br />
+        <a href="#/tripdetail/{{item.TripId}}" class="more">More Details</a>
+    </div>
+</div>
+
+
+

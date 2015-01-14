@@ -14,26 +14,17 @@ namespace CCP_Nalashaa_WebAPI.Models
     
     public partial class Trip
     {
-        public Trip()
-        {
-            this.Commuters = new HashSet<Commuter>();
-            this.CommuterRequests = new HashSet<CommuterRequest>();
-        }
-    
         public int TripId { get; set; }
         public Nullable<int> UserId { get; set; }
         public string Origin { get; set; }
         public string Destination { get; set; }
-        public string Origin_LatLn { get; set; }
-        public string Destination_LatLn { get; set; }
+        public Nullable<double> Origin_Lat { get; set; }
+        public Nullable<double> Origin_Ln { get; set; }
+        public Nullable<double> Destination_Lat { get; set; }
+        public Nullable<double> Destination_Ln { get; set; }
         public Nullable<int> CommutersCapacity { get; set; }
         public Nullable<System.DateTime> TripDate { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<int> TripStatus { get; set; }
-    
-        public virtual ICollection<Commuter> Commuters { get; set; }
-        public virtual ICollection<CommuterRequest> CommuterRequests { get; set; }
-        public virtual TripStatusMaster TripStatusMaster { get; set; }
-        public virtual User User { get; set; }
     }
 }

@@ -1,0 +1,18 @@
+﻿<div class="title">
+    <h2>Trip Detail</h2>
+</div>
+<div class="list-container">
+    <div class="list">
+        Trip Date & Time: <span class="date">{{trip.TripDate | date:"MM/dd/yyyy 'at' h:mma"}}</span><br />
+        <span class="origin">{{trip.Origin}}</span><br />
+        <span class="destination">{{trip.Destination}}</span><br />
+        <span class="capacity">Commuters Capacity: {{trip.CommutersCapacity}}</span><br />
+        <iframe id="directionFrame" src="{{getFrameSrc(trip.Origin_Lat, trip.Origin_Ln, trip.Destination_Lat, trip.Destination_Ln)}}" width="600" height="600"></iframe><br />
+        Status: <span class="{{getTripStatus(trip.TripStatus)}}">{{getTripStatus(trip.TripStatus)}}</span><br />
+        Created On: <span class="bold">{{trip.CreatedDate | date:"MM/dd/yyyy 'at' h:mma"}}</span><br />
+        <a href="#/requesttrip/{{trip.TripId}}" class="more">Send Request</a><a href="#/mytrips/" class="more">Back</a>
+    </div>
+</div>
+
+
+

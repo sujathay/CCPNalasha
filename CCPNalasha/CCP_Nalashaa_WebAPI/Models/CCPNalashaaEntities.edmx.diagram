@@ -5,17 +5,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="1f8754c51a5041cdb1f813feb3ab086a" Name="Diagram1">
-        <EntityTypeShape EntityType="CCPNalashaaModel.Commuter" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CCPNalashaaModel.CommuterRequest" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CCPNalashaaModel.Trip" Width="1.5" PointX="6" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="CCPNalashaaModel.TripStatusMaster" Width="1.5" PointX="3.75" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CCPNalashaaModel.User" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
-        <AssociationConnector Association="CCPNalashaaModel.FK_Commuter_Trip" ManuallyRouted="false" />
-        <AssociationConnector Association="CCPNalashaaModel.FK_Commuter_User" ManuallyRouted="false" />
-        <AssociationConnector Association="CCPNalashaaModel.FK_CommuterRequest_Trip" ManuallyRouted="false" />
-        <AssociationConnector Association="CCPNalashaaModel.FK_CommuterRequest_User" ManuallyRouted="false" />
-        <AssociationConnector Association="CCPNalashaaModel.FK_Trip_TripStatusMaster" ManuallyRouted="false" />
-        <AssociationConnector Association="CCPNalashaaModel.FK_Trip_User" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CCPNalashaaModel.Commuter" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CCPNalashaaModel.CommuterRequest" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CCPNalashaaModel.Trip" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CCPNalashaaModel.TripStatusMaster" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CCPNalashaaModel.User" Width="1.5" PointX="4.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

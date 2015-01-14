@@ -14,14 +14,7 @@ namespace CCP_Nalashaa_WebAPI.Models
     
     public partial class TripStatusMaster
     {
-        public TripStatusMaster()
-        {
-            this.Trips = new HashSet<Trip>();
-        }
-    
         public int TripStatusId { get; set; }
         public string StatusName { get; set; }
-    
-        public virtual ICollection<Trip> Trips { get; set; }
     }
 }

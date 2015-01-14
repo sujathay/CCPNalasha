@@ -59,6 +59,9 @@
   <ItemGroup>
     <Content Include="AddCP.html" />
     <Content Include="bin\CCPNalashaa.dll.config" />
+    <Content Include="direction.html" />
+    <Content Include="dirPagination.tpl.html" />
+    <Content Include="mytrips.html" />
     <Content Include="obj\Debug\CCPNalashaa.csprojResolveAssemblyReference.cache" />
     <Content Include="obj\Debug\CCP_Nalashaa.csprojResolveAssemblyReference.cache" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
@@ -90,13 +93,12 @@
     <Content Include="scripts\angular.min.js" />
     <Content Include="scripts\app.js" />
     <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\dirPagination.js" />
     <Content Include="scripts\index.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-ui.min.js" />
     <Content Include="scripts\jquery_1.9.1.min.js" />
     <Content Include="scripts\json-data.js" />
-    <Content Include="scripts\trips-json-data.js" />
-    <Content Include="scripts\users-json-data.js" />
     <Content Include="styles\background.png" />
     <Content Include="styles\bullet.png" />
     <Content Include="styles\carpool_logo.gif" />
@@ -107,6 +109,8 @@
     <Content Include="styles\style.css" />
     <Content Include="styles\transparent.png" />
     <Content Include="styles\transparent_light.png" />
+    <Content Include="tripdetail.html" />
+    <Content Include="tripmgt.html" />
     <Content Include="views\Login.html" />
     <Content Include="views\Registration.html" />
     <Content Include="Web.config" />

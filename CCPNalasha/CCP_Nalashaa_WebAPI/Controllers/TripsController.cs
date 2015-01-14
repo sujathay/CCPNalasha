@@ -9,9 +9,11 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using CCP_Nalashaa_WebAPI.Models;
+using System.Web.Http.Cors;
 
 namespace CCP_Nalashaa_WebAPI.Controllers
 {
+    [EnableCors("http://localhost", "*", "*")]
     public class TripsController : ApiController
     {
         private CCPNalashaaEntities db = new CCPNalashaaEntities();
@@ -33,6 +35,22 @@ namespace CCP_Nalashaa_WebAPI.Controllers
             }
 
             return Ok(trip);
+        }
+
+        public IQueryable<Trip> GetTrips(double source_lat, double source_ln, double destination_lat, double destination_ln)
+        {
+            //"Origin_Lat":25.75949409,"Origin_Ln":35.7594049,"Destination_Lat":23.574939,"Destination_Ln":23.239404,
+            source_lat = 25.75949409;
+            source_ln = 35.7594049;
+            destination_lat = 23.574939;
+            destination_ln = 23.239404;
+
+            var allTrips = db.Trips;
+            var trips = GetTrips().Where(x => x.Origin_Lat.Value.TruncateDecimalPlaces(2) == source_lat && x.Origin_Ln.Value.TruncateDecimalPlaces(2) == source_ln && x.Destination_Lat.Value.TruncateDecimalPlaces(2) == destination_lat && x.Destination_Ln.Value.TruncateDecimalPlaces(2) == destination_ln);
+
+            //GeoHelper gp = new GeoHelper();
+
+            return trips;
         }
 
         // PUT: api/Trips/5
@@ -71,18 +89,22 @@ namespace CCP_Nalashaa_WebAPI.Controllers
         }
 
         // POST: api/Trips
+        
         [ResponseType(typeof(Trip))]
+        [HttpPost()]
         public IHttpActionResult PostTrip(Trip trip)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+            using (var context = new ApplicationDbContext())
+            {
+                db.Trips.Add(trip);
+                db.SaveChanges();
 
-            db.Trips.Add(trip);
-            db.SaveChanges();
-
-            return CreatedAtRoute("DefaultApi", new { id = trip.TripId }, trip);
+                return CreatedAtRoute("DefaultApi", new { id = trip.TripId }, trip);
+            }
         }
 
         // DELETE: api/Trips/5

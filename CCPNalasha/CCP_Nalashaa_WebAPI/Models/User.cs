@@ -14,13 +14,6 @@ namespace CCP_Nalashaa_WebAPI.Models
     
     public partial class User
     {
-        public User()
-        {
-            this.Commuters = new HashSet<Commuter>();
-            this.CommuterRequests = new HashSet<CommuterRequest>();
-            this.Trips = new HashSet<Trip>();
-        }
-    
         public int UserId { get; set; }
         public string Username { get; set; }
         public string UserPassword { get; set; }
@@ -30,9 +23,5 @@ namespace CCP_Nalashaa_WebAPI.Models
         public string MobileNo { get; set; }
         public string Gender { get; set; }
         public Nullable<System.DateTime> RegisteredDate { get; set; }
-    
-        public virtual ICollection<Commuter> Commuters { get; set; }
-        public virtual ICollection<CommuterRequest> CommuterRequests { get; set; }
-        public virtual ICollection<Trip> Trips { get; set; }
     }
 }

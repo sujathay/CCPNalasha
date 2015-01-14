@@ -1,23 +1,14 @@
-﻿ 
-
-body
+﻿body
 {
     margin: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 9pt;
 }
-.main-form input.ng-invalid.ng-touched {
-    border-color: #FA787E;
-  }
 
-  .main-form input.ng-valid.ng-touched {
-    border-color: #78FA89;
-  }
-.list-container, .detailed-trip
+.list-container
 {
-    width: 50%;
+    width: 60%;
     display: block;
-    float:left;
 }
 #wrapper {
   font: 20px Calibri;
@@ -157,18 +148,3 @@ table a.cancel
     {
         text-decoration: none;
     }
-
-  .new-line
-  {
-       height: 10px;
-      display:block;
-   }
- .wrapper{
-     width: 1005px;
-     margin: 0 auto;
- }
-
- .details-trip span,  .details-trip div {
-     font-size:20px;
-     margin-bottom:5px;
- }

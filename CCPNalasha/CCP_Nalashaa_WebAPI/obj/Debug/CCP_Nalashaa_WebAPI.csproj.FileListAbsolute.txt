@@ -110,6 +110,9 @@ D:\projects\CCPNalashaa\CCP_Nalashaa_WebAPI\bin\Microsoft.Owin.Security.Google.x
 D:\projects\CCPNalashaa\CCP_Nalashaa_WebAPI\bin\Microsoft.Owin.Security.Twitter.xml
 D:\projects\CCPNalashaa\CCP_Nalashaa_WebAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\projects\CCPNalashaa\CCP_Nalashaa_WebAPI\bin\Microsoft.Owin.Security.OAuth.xml
-D:\projects\CCPNalashaa\CCP_Nalashaa_WebAPI\obj\Debug\CCP_Nalashaa_WebAPI.csprojResolveAssemblyReference.cache
 D:\projects\CCPNalashaa\CCP_Nalashaa_WebAPI\obj\Debug\CCP_Nalashaa_WebAPI.dll
 D:\projects\CCPNalashaa\CCP_Nalashaa_WebAPI\obj\Debug\CCP_Nalashaa_WebAPI.pdb
+D:\projects\CCPNalashaa\CCP_Nalashaa_WebAPI\obj\Debug\CCP_Nalashaa_WebAPI.csprojResolveAssemblyReference.cache
+D:\projects\CCPNalashaa\CCP_Nalashaa_WebAPI\bin\System.Web.Cors.dll
+D:\projects\CCPNalashaa\CCP_Nalashaa_WebAPI\bin\System.Web.Http.Cors.dll
+D:\projects\CCPNalashaa\CCP_Nalashaa_WebAPI\bin\System.Web.Http.Cors.xml
