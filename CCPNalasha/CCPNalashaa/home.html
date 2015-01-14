@@ -2,7 +2,7 @@
     Trips
 </h1>
 <h2 style="width:750px;">
-    It is an internal carpool website for the company . It allows to search pools across companies.
+    
 </h2>
 
 <div class="new-line"></div>
@@ -10,19 +10,23 @@
 <div class="wrapper"> 
    
 
-    <div class="list-container">
+    <div class="list-container"  >
         <table ng-table="tableParams" id="results">
-            <tr>
-                <th>#</th>
-                <th><a ng-click="orderBy('Origin')">Name</a></th>
-                <th><a ng-click="orderBy('Destination')">Route</a></th>
+            <tr> 
+                <th><a ng-click="orderBy('Origin')">Origin</a></th>
+                <th><a ng-click="orderBy('Destination')">Destination</a></th>
+                <th><a ng-click="orderBy('UserId')">Initiated By</a></th>
+                <th><a ng-click="orderBy('TripStatus')">Trip Status</a></th>
+                <th></th>
                 <th></th>
             </tr>
 
             <tr ng-repeat="item in tripDetails | startFrom:currentPage*pageSize | limitTo:pageSize" id="item_{{item.TripId}}">
                 <td>{{item.Origin}}</td>
                 <td>{{item.Destination}}</td>
-                <td><button ng-click="MoreDetails(item.TripId)">More</button></td>
+                <td>Sujatha Y</td>
+                <td>Open</td>
+                <td><a href="#/tripdetail/{{item.TripId}}" class="more">More Details</a></td>
                 <td><button  >Edit</button></td>
             </tr>
 
@@ -38,17 +42,6 @@
 
        
     </div>
-    <div class="detailed-trip" ng-show="isDetailedTrip">
-        <h2>Details</h2>
-        <div class="details-trip" ng-repeat="item in selectedTrip" id="item_{{item.SlNo}}">
-            <span>{{item.Origin}}</span><span>{{item.Origin}}</span>
-            <div>{{item.Destination}}</div>
-            <div>{{item.TripDate}}</div>
-            <!--<div>{{item.Phone}}</div>
-            <div>{{item.DateTime}}</div>-->
-            <span>Send request to join the trip</span><button>Join</button>
-        </div>
-
-    </div>
+    
 </div>
 
